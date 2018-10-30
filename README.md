@@ -2,6 +2,6 @@
 # Project SE
 
 ----------------
-
-## CED#4
 ### EasyConnect
+#### Connect to Hardware Network ( Router , Switch ) 
+#### !! Show Log !!
