@@ -1,5 +1,5 @@
-# Se-python
-# Project SE
+# Python -> Django 
+# SoftwareEngineering (Project #4)
 
 ----------------
 ### EasyConnect
