@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Easy-Connect</title>
+
+   
 </head>
 
-<style>
+{% comment %} <style>
 
     body {
     font-family: "Times New Roman", Times, serif;
@@ -16,12 +18,15 @@
 }
 .button1 {background-color: #4CAF50;}
 
-</style>
+</style> {% endcomment %}
 
 <body>
+
+
  
 <!-- choose function display .. -->
-        <form action="/" method="get">
+<div class="container flex">
+        <form action="/" method="get" class="bg-info">
             <input type="checkbox">Show Inventory<br>
             <input type="checkbox">Version<br>
             <input type="checkbox">Environment<br>
@@ -33,9 +38,9 @@
             <input type="checkbox">Cdb Neighbors<br>
             <input type="checkbox">VLan<br>
 
-            <input type="submit" class="button1" value="Submit">
+            <input class="btn-primary align-center" type="submit" class="button1" value="Submit">
         </form>
-
+</div>
 
 </body>
 

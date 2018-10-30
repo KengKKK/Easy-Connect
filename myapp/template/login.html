@@ -6,20 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Easy-Connect</title>
-</head>
 
-<style>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static '/index/style.css'%}" type="text/css">
 
-    body {
-    background-color: lightblue;
-}
-.button1 {background-color: #4CAF50;}
+
+
 
 </style>
 
+</head>
+
+
+
 <body>
     <center>
-
         <form action="/" method="get">
             <h1>Login</h1>
 
@@ -29,7 +30,7 @@
             <input type="text" placeholder={{ password }} />
             </br>
             </br>
-            <input type="submit" class="button1" value="Submit">
+            <input  type="submit" id="ok" class="btn btn-primary " value="Submit">
         </form>
 
 

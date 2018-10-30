@@ -11,8 +11,8 @@ def function(request):
 def login(request):
     template = loader.get_template("login.html")
     data = {
-        'user':"admin",
-        'password':"admin",
+        'user':"tets",
+        'password':"test",
     }
     return HttpResponse(template.render(data,request))
 
