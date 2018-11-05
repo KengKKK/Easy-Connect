@@ -2328,7 +2328,7 @@ html {
   }
   .btn-primary:hover {
     color: #fff;
-    background-color: red;
+    background-color: #286090;
     border-color: #204d74;
   }
   .btn-primary:active,
