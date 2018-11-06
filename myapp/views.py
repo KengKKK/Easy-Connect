@@ -10,12 +10,12 @@ def function(request):
     template = loader.get_template("function.html")
     return HttpResponse(template.render())
 
-def login(request):
-    data = {
-        'user':"eiei",
-        'password':"kk",
-    }
-    return render(request, 'login.html',data)
+# def login(request):
+#     data = {
+#         'user':"eiei",
+#         'password':"kk",
+#     }
+#     return render(request, 'login.html',data)
 
 def connect(request):
     template = loader.get_template("connect.html")
