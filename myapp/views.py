@@ -4,8 +4,9 @@ from django.http import HttpResponse
 
 # Create your views here.
 
-# def connect(request):
-#     return render(request, '/pages/connect.html')
+def my_view(request):
+
+        return render(request, 'test.html')
 
 
 

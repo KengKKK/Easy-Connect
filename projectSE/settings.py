@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'projectSE.urls'
+ROOT_URLCONF = 'myapp.urls'
 
 TEMPLATES = [
     {
@@ -124,6 +124,7 @@ STATIC_DIRS = 'myapp/static'
 STATICFILES_DIRS = [
     STATIC_DIRS,
 ]
+LOGIN_URL = '/account/login/'
+LOGIN_REDIRECT_URL = '/'
 
-LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = '/account/login/'
