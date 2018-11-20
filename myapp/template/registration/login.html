@@ -32,11 +32,9 @@
             <h1 class="mb-3">Easy-Connect</h1>
             <p class="mb-5">Connect and Show Config the router Sign in for using the Website</p>
 
-            {% if form.errors %}
-            <p>Your username and password didn't match. Please try again.</p>
-            {% endif %}
+  
 
-            {% block content %}
+
 
 
                   {% if user.is_authenticated %}
@@ -46,11 +44,17 @@
                     <a class="btn btn-info" href="/connect">GO TO CONNECT</a>
             
                     {% else %}
+
                     <form method="post">
                       <div class="input-group">
                         {% csrf_token %}
                         
                       </div>
+
+                        {% if form.errors %}
+                        <p>Your username and password didn't match. Please try again.</p>
+                        {% endif %}
+
                       <div class="input-group ">
                         {{ form.as_p }}
                       </div>
@@ -58,8 +62,9 @@
                         <button class="btn btn-secondary" type="submit">Login</button>
                       </div>
                     </form>
+                    
                   {% endif %}
-            {% endblock %}
+
           </div>
           </br>
         </div>

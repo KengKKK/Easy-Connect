@@ -124,7 +124,6 @@ STATIC_DIRS = 'myapp/static'
 STATICFILES_DIRS = [
     STATIC_DIRS,
 ]
-LOGIN_URL = '/account/login/'
-LOGIN_REDIRECT_URL = '/'
-
-LOGOUT_REDIRECT_URL = '/account/login/'
+LOGIN_URL = 'test'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'

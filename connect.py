@@ -4,7 +4,9 @@ import sys, paramiko
 import os
 import getpass
 
-import sys, paramiko
+
+    
+os.system("sh talk.sh")
 
 
 # user = getpass.getpass('Username :' )
@@ -15,8 +17,10 @@ import sys, paramiko
 # print ('############################')
 
 
-with open("ShowLog.txt","r") as show:
-    print (show.read())
+# with open("ShowLog.txt","r") as show:
+#     print (show.read())
+
+
 
 # if len(sys.argv) < 4:
 #     print ("args missing")
