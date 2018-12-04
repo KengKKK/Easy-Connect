@@ -6,7 +6,7 @@ import getpass
 
 
     
-os.system("sh talk.sh")
+# os.system("sh talk.sh")
 
 
 # user = getpass.getpass('Username :' )
@@ -17,8 +17,11 @@ os.system("sh talk.sh")
 # print ('############################')
 
 
-# with open("ShowLog.txt","r") as show:
-#     print (show.read())
+def ShowLog():
+    f = open("ShowLog.txt","r")
+    data = f.read()
+    print(data)
+    f.close()
 
 
 

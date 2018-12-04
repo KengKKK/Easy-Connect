@@ -13,7 +13,7 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
 
     path('connect', login_required(TemplateView.as_view(template_name='pages/connect.html'))),
-    path('func', login_required(TemplateView.as_view(template_name='pages/function.html'))),
     
+    path('func', login_required(views.func)), 
     path('test', login_required(views.my_view)), 
 ]
