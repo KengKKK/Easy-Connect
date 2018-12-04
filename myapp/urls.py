@@ -14,6 +14,10 @@ urlpatterns = [
 
     path('connect', login_required(TemplateView.as_view(template_name='pages/connect.html'))),
     
-    path('func', login_required(views.func)), 
-    path('test', login_required(views.my_view)), 
+    path('func', login_required(views.func)),
+    path('show', login_required(views.show)),  
+
+    
+    path('callScript', login_required(views.callScript)), 
+    path('connectSwitch', login_required(views.connectSwitch)), 
 ]
