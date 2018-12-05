@@ -5,16 +5,10 @@ import os
 import getpass
 
 
-    
-# os.system("sh talk.sh")
+# os.system("talk.sh")
 
-
-# user = getpass.getpass('Username :' )
-# passw = getpass.getpass('Password :' )
-# print ('############################')
-# print ('User :', user)
-# print ('Pass :', passw)
-# print ('############################')
+def Shell():
+    os.system("talk.sh")
 
 
 def ShowLog():
@@ -22,32 +16,11 @@ def ShowLog():
     data = f.read()
     print(data)
     f.close()
+ 
 
+# def WriteLog():
+#     f = open("Test.txt","w")
+#     data = f.write()
+#     # print(data)
+#     f.close()
 
-
-# if len(sys.argv) < 4:
-#     print ("args missing")
-#     sys.exit(1)
-
-
-
-
-# hostname = sys.argv[1]
-# password = sys.argv[2]
-# command = sys.argv[3]
-
-# username = "admin"
-# port = 22
-
-# try:
-#     client = paramiko.SSHClient()
-#     client.load_system_host_keys()
-#     client.set_missing_host_key_policy(paramiko.WarningPolicy)
-    
-#     client.connect(hostname, port=port, username=username, password=password)
-
-#     stdin, stdout, stderr = client.exec_command(command)
-#     print (stdout.read()),
-
-# finally:
-#     client.close()

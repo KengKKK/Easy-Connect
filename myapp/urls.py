@@ -17,7 +17,8 @@ urlpatterns = [
     path('func', login_required(views.func)),
     path('show', login_required(views.show)),  
 
-    
+    # function
     path('callScript', login_required(views.callScript)), 
+    # connect
     path('connectSwitch', login_required(views.connectSwitch)), 
 ]

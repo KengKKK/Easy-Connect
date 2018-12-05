@@ -50,37 +50,43 @@
 
                         {% csrf_token %}
 
+                        <textarea rows="4" cols="50" name="comment" form="usrform">
+                            {{ ip }}
+            
+                        </textarea>
+
+                        
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" />
+                            <input name="inventory" type="checkbox" class="form-check-input" />
                             <label class="form-check-label">Show Inventory</label><br>
 
-                            <input type="checkbox" class="form-check-input">
+                            <input name="Version" type="checkbox" class="form-check-input">
                             <label class="form-check-label">Show Version</label><br>
 
-                            <input type="checkbox" class="form-check-input">
+                            <input name="Environment" type="checkbox" class="form-check-input">
                             <label class="form-check-label">Show Environment</label><br>
 
-                            <input type="checkbox" class="form-check-input">
+                            <input name="CPU" type="checkbox" class="form-check-input">
                             <label class="form-check-label">Show Process CPU Sort</label><br>
 
-                            <input type="checkbox" class="form-check-input">
+                            <input name="Memory" type="checkbox" class="form-check-input">
                             <label class="form-check-label">Show Process Memory</label><br>
 
-                            <input type="checkbox" class="form-check-input">
+                            <input name="Clock" type="checkbox" class="form-check-input">
                             <label class="form-check-label">Show Clock</label><br>
-                            <input type="checkbox" class="form-check-input">
+                            <input name="Logging" type="checkbox" class="form-check-input">
                             <label class="form-check-label">Show Logging</label><br>
 
-                            <input type="checkbox" class="form-check-input">
+                            <input name="System" type="checkbox" class="form-check-input">
                             <label class="form-check-label">Show File System</label><br>
 
-                            <input type="checkbox" class="form-check-input">
+                            <input name="Neighbors" type="checkbox" class="form-check-input">
                             <label class="form-check-label">Show Cdp Neighbors</label><br>
 
-                            <input type="checkbox" class="form-check-input">Show Vlan
+                            <input name="Vlan" type="checkbox" class="form-check-input">Show Vlan
                             <label class="form-check-label">Show Vlan</label><br>
 
-                            <input type="checkbox" class="form-check-input">
+                            <input name="Interface" type="checkbox" class="form-check-input">
                             <label class="form-check-label">Show Interface Vlan</label><br>
                         </div>
                         {{ form }}

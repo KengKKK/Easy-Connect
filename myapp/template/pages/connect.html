@@ -44,23 +44,16 @@
             <div class="row">
                 <div class="col-xl-9 mx-auto">
                     <a class="btn btn-warning" href="func">Go tu Function</a>
-                    <h1 class="mb-5">Connect Show the Log !!</h1>
+                    <h1 class="mb-5">Connect Switch --> Telnet</h1>
                 </div>
                 <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
 
                     <form action="connectSwitch" method="POST">
                         {% csrf_token %}
                         {{ form }}
-                        <input type="text" class="form-control form-control-lg" placeholder="192.168.0.0" />
-                        <input type="text" class="form-control form-control-lg" placeholder="Serial Port xxxx " />
-                        <div class="form-check form-check-inline">
-                            <div class="row">
-                                <input class="form-check-input" type="checkbox" value="option1">Telnet
-                                <input class="form-check-input" type="checkbox" value="option1">Serial Port
-                                <input class="form-check-input" type="checkbox" value="option1">SSN
-                            </div>
-                        </div>
-                    <br /><br />
+                        <input name="Ip" type="text" class="form-control form-control-lg" placeholder="192.168.0.0" />
+                        <!-- <input name="Port" type="text" class="form-control form-control-lg" placeholder="Serial Port xxxx " /> -->
+                        <br/><br />
                         <input type="submit" class="btn btn-primary" value="Connect" />
                     </form>
 
