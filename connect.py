@@ -16,11 +16,4 @@ def ShowLog():
     data = f.read()
     print(data)
     f.close()
- 
-
-# def WriteLog():
-#     f = open("Test.txt","w")
-#     data = f.write()
-#     # print(data)
-#     f.close()
 
