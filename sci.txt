@@ -1,8 +1,0 @@
-  read [ -ACSprsv ] [ -d delim] [ -n n] [ [ -N n] [ [ -t  timeout]  [  -u
-   unit] [ vname?prompt ] [ vname ... ]
-          The  shell  input  mechanism.  One line is read and is broken up
-          into fields using the characters  in  IFS  as  separators.   The
-          escape  character,  \, is used to remove any special meaning for
-          the next character and for line  continuation.   The  -d  option
-          causes  the  read  to  continue  to the first character of delim
-          rather than new-line.

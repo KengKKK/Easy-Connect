@@ -7,7 +7,7 @@ from connect import ShowLog,Shell
 from .form import CallScript, ConnectSwitch
 
 # Create your views here.
-
+global data 
 
 def home(request):
     return render(request, 'home.html')
@@ -18,7 +18,7 @@ def show(request):
 
 
 def func(request):
-    return render(request, 'pages/function.html' ,data)
+    return render(request, 'pages/function.html')
 
 
 
@@ -106,11 +106,12 @@ def callScript(request):
 def connectSwitch(request):
     if request.method == 'POST':
         Shell()
+        # main()
         Ip = request.POST.get('Ip')
         f = open("config/IpPort.txt", "w")
         f.writelines(['telnet ', Ip])
         f.close()
-        global data 
+
         data = {
             'ip': Ip,
         }

@@ -1,107 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Easy-Connect</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Easy-Connect</title>
 
-     {% load staticfiles %}
-    <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css'%}" type="text/css">
-    <link rel="stylesheet" href="{% static 'pages/landing-page.min.css'%}" type="text/css">
-
-    <link rel="stylesheet" href="{% static 'vendor/fontawesome-free/css/all.min.css'%}" type="text/css">
-    <link rel="stylesheet" href="{% static 'vendor/simple-line-icons/css/simple-line-icons.css'%}" type="text/css">
+  {% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'pages/bootstrap.min.css'%}" type="text/css">
+  <link rel="stylesheet" href="{% static 'pages/coming-soon.min.css'%}" type="text/css">
 
 
-
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
-        type="text/css">
-
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
 </head>
-
+<style>
+  .bg-wi {
+    background: url(../../../static/img/bg-index.jpg);
+    background-color: #cccccc; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  }
+</style>
 <body>
-      <div class="container">
 
-       {% if user.is_authenticated %}
-          <nav class="navbar navbar-light bg-light static-top">
-        <div class="container">
-            <a class="navbar-brand">Easy-Connect</a>
-            <a class="btn btn-warning" href="{% url 'logout' %}">ออกจากระบบ</a>
+  <div class="overlay bg-wi"></div>
+  <div class="masthead">
+    <div class="masthead-bg"></div>
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col-12 my-auto">
+          <div class="masthead-content text-white py-5 py-md-0">
+            <h1 class="mb-3">Easy-Connect</h1>
+            <p class="mb-5">Connect and Show Config the router Sign in for using the Website</p>
+
+  
+                  {% if user.is_authenticated %}
+
+
+                  <a class="btn btn-warning" href="func">Go to Function</a><br /><br />
+                  <a class="btn btn-danger" href="connect">Go to Connect</a>
+
+
+                    {% else %}
+
+                    <a class="btn btn-warning" href="{% url 'login' %}">เข้าสู่ระบบ</a>
+                    
+                  {% endif %}
+
+          </div>
+          </br>
         </div>
-    </nav>
-
-  <section class="features-icons bg-light text-center">
-  <a class="btn btn-warning" href="func" >Go to Function</a><br/><br/>
-  <a class="btn btn-danger" href="connect" >Go to Connect</a>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                        <div class="features-icons-icon d-flex">
-                            <i class="icon-screen-desktop m-auto text-primary"></i>
-                        </div>
-                        <h3>Fully Responsive</h3>
-                        <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                        <div class="features-icons-icon d-flex">
-                            <i class="icon-layers m-auto text-primary"></i>
-                        </div>
-                        <h3>Bootstrap 4 Ready</h3>
-                        <p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-                        <div class="features-icons-icon d-flex">
-                            <i class="icon-check m-auto text-primary"></i>
-                        </div>
-                        <h3>Easy to Use</h3>
-                        <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-<!-- Navigation -->
-
-{% else %}
-   <nav class="navbar navbar-light bg-light static-top">
-        <div class="container">
-            <a class="navbar-brand">Easy-Connect</a>
-            <a class="btn btn-warning" href="{% url 'login' %}">เข้าสู่ระบบ</a>
-        </div>
-    </nav>
-
-     <section class="features-icons bg-light text-center" >
-        <div class="container" >
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-                        <div class="features-icons-icon d-flex">
-                            <i class="icon-check m-auto text-primary"></i>
-                        </div>
-                        <h3>Easy-Connect</h3>
-                        <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-{% endif %}
+      </div>
+    </div>
+  </div>
+  </div>
 
 
 
-
-
-
-</div>
 
 </body>
+
 </html>
+{% comment %} Link Original {% endcomment %}
+{% comment %} https://github.com/BlackrockDigital/startbootstrap-coming-soon/blob/master/index.html {% endcomment %}
