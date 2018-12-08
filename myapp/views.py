@@ -106,6 +106,7 @@ def callScript(request):
 def connectSwitch(request):
     if request.method == 'POST':
         Shell()
+        
         # main()
         Ip = request.POST.get('Ip')
         f = open("config/IpPort.txt", "w")
