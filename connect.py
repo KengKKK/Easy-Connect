@@ -1,15 +1,18 @@
 #!/usr/bin/env python
 
-import sys,telnetlib,paramiko
+import sys
 import os
-import getpass,time
+from telnetlib import Telnet
+import getpass
 
 def Shell():
     os.system("talk.py")
 
+
+
 def ShowLog():
-    f = open("ShowLog.txt","r")
-    data = f.read()
+    f = open("Output.txt","r")
+    data = f.readlines()
     print(data)
     f.close()
 

@@ -20,6 +20,8 @@ class CallScript(forms.Form):
 class ConnectSwitch(forms.Form):
     
     Ip = forms.CharField(label='IP', max_length=25)
+    user = forms.CharField(label='IP', max_length=25)
+    passw = forms.CharField(label='IP', max_length=25)
     # Port = forms.CharField(label='Port', max_length=4)
 
     # ConnectSwitch = forms.BooleanField(required=False)

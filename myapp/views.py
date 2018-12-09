@@ -3,7 +3,8 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 
 from connect import ShowLog,Shell
-
+from talk import Test
+import json
 from .form import CallScript, ConnectSwitch
 
 # Create your views here.
@@ -104,16 +105,25 @@ def callScript(request):
 
 # connect
 def connectSwitch(request):
-    if request.method == 'POST':
-        Shell()
-        
-        # main()
+    if request.method == 'POST':        
         Ip = request.POST.get('Ip')
-        f = open("config/IpPort.txt", "w")
-        f.writelines(['telnet ', Ip])
+        user = request.POST.get('user')
+        passw = request.POST.get('passw')
+        Test(Ip,user,passw)
+
+
+        # f = open("Output.txt","r")
+        # output = f.read().splitlines()
+
+        f = open("Output.txt","r")
+        output = json.loads(f)
+        f.write(json.dumps(data, indent=1))
         f.close()
 
+
         data = {
-            'ip': Ip,
+        
+            'output' : output
         }
+     
     return render(request, 'pages/show.html' ,data)

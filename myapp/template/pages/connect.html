@@ -60,6 +60,8 @@
                         {% csrf_token %}
                         {{ form }}
                         <input name="Ip" type="text" class="form-control form-control-lg" placeholder="192.168.0.0" />
+                        <input name="user" type="text" class="form-control form-control-lg" placeholder="Username" />
+                        <input name="passw" type="text" class="form-control form-control-lg" placeholder="Password" />
                         <!-- <input name="Port" type="text" class="form-control form-control-lg" placeholder="Serial Port xxxx " /> -->
                         <br /><br />
                         <input type="submit" class="btn btn-primary" value="Connect" />

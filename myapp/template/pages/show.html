@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="{% static 'vendor/fontawesome-free/css/all.min.css'%}" type="text/css">
     <link rel="stylesheet" href="{% static 'vendor/simple-line-icons/css/simple-line-icons.css'%}" type="text/css">
 
+ 
+
 
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
@@ -27,14 +29,21 @@
 
 </head>
 <style>
-        .bg-wi {
-              background: url(../../../static/img/bg-index.jpg);
-              background-color: #cccccc; 
-            background-position: center; 
-            background-repeat: no-repeat; 
-            background-size: cover; 
-            }
-          </style>
+    .bg-wi {
+        /* background: url(../../../static/img/bg-index.jpg); */
+        background-color: #cccccc;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #x {
+
+        padding: 1em;
+        width: 80%;
+    }
+</style>
+
 <body class="bg-wi">
 
     <!-- Navigation -->
@@ -45,26 +54,34 @@
         </div>
     </nav>
 
-    <!-- Masthead -->
-    <header class="masthead text-white text-center">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-9 mx-auto">
-                    <h1 class="mb-5">Show the Log !!</h1>
-                </div>
-                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-                    <form>
-                        <textarea rows="4" cols="50" name="comment" form="usrform">
-                            {{ ip }}
-                
-                        </textarea>
-                    </form>
-                    <a class="btn btn-warning" href="func">Go tu Function</a>
-                </div>
-            </div>
+    <div class="col-lg-12">
+        
+        <div class="col-lg-6">
+            {{ output }}
         </div>
-    </header>
+    </div>
+
+
+
+    <!-- Masthead -->
+    <!-- <header class="masthead text-white text-center">
+
+        <div id="x" class="text-white">
+         
+        </div> -->
+
+
+    <!-- <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+                    {{ test }} -->
+    <!-- <form>
+                        <textarea class="container-fluid">
+                            {{ ip }} 
+                    
+                        </textarea>
+                    </form> -->
+    <!-- <a class="btn btn-warning" href="func">Go tu Function</a>
+                </div> -->
+    <!-- </header> -->
 
 
 
