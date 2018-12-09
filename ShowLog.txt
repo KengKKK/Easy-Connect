@@ -1,9 +1,0 @@
- show inventory
- show version
- show env
- show pro cpu sort
- show pro mem sort 
- show logging
- show flash
- show cdp neir
- 
