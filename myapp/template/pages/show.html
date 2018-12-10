@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Show</title>
+    <title>Output</title>
 
     {% load staticfiles %}
     <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css'%}" type="text/css">
@@ -16,9 +16,6 @@
 
     <link rel="stylesheet" href="{% static 'vendor/fontawesome-free/css/all.min.css'%}" type="text/css">
     <link rel="stylesheet" href="{% static 'vendor/simple-line-icons/css/simple-line-icons.css'%}" type="text/css">
-
-
-
 
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
@@ -30,40 +27,35 @@
 </head>
 <style>
     .bg-wi {
-        /* background: url(../../../static/img/bg-index.jpg); */
-        background-color: #cccccc;
+        background: url(../../../static/img/bg-index.jpg);
+
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
 
-    #x {
-        text-align: justify;
-        width: 100%;
+    .output {
+        background-color: #212529;
     }
 </style>
 
 <body class="bg-wi">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-light bg-light static-top">
+    <nav class="navbar navbar-light bg-light ">
         <div class="container">
             <a class="navbar-brand">Easy-Connect</a>
-            <a class="btn btn-warning" href="{% url 'logout' %}">ออกจากระบบ</a>
-            <a class="btn btn-warning" href="connect">Go to Connect</a>
+            <div>
+                <a class="btn btn-warning" href="{% url 'logout' %}">ออกจากระบบ</a>
+                <a class="btn btn-warning" href="connect">Go to Connect</a>
+            </div>
         </div>
     </nav>
 
-    <div class="container-fluid">
+    <pre class="container text-white output">
 
-        <pre>
-            
             {{ output }}
         </pre>
-
-        
-    </div>
-
 </body>
 
 </html>
