@@ -22,7 +22,7 @@ def connectSwitch(request):
         Ip = request.POST.get('Ip')
         user = request.POST.get('user')
         passw = request.POST.get('passw')
-        Switch(Ip,user,passw)
+        # Switch(Ip,user,passw)
 
         f = open("Output.txt","r")
         output = f.read()
